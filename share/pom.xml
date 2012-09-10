@@ -24,7 +24,7 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.alfresco.enterprise</groupId>
+			<groupId>org.alfresco</groupId>
 			<artifactId>alfresco-share</artifactId>
 			<version>${alfresco.version}</version>
 			<type>pom</type>

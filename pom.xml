@@ -19,7 +19,7 @@
 
 	<!-- The required repositories for the project -->
 	<repositories>
-		<!-- Alfresco repositories  -->
+		<!-- Alfresco repositories -->
 		<repository>
 			<id>alfresco-public-snapshots</id>
 			<url>https://artifacts.alfresco.com/nexus/content/groups/public-snapshots</url>
@@ -28,17 +28,10 @@
 				<updatePolicy>daily</updatePolicy>
 			</snapshots>
 		</repository>
-		
-        <repository>
-            <id>ixxus-alfresco-private</id>
-            <url>http://172.16.10.149:8081/nexus/content/repositories/alfresco-private-repository/</url>
-          </repository>
-        
 		<repository>
 			<id>alfresco-public</id>
 			<url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
 		</repository>
-        
 		<!-- Bring in the Maven Central repo too, so we can get access to libs such as commons-logging -->
 		<repository>
 			<id>Maven Central</id>
@@ -46,12 +39,10 @@
 		</repository>
 	</repositories>
 	<pluginRepositories>
-        
 		<pluginRepository>
 			<id>alfresco-public</id>
             <url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
 		</pluginRepository>
-        
 		<pluginRepository>
 			<id>alfresco-public-snapshots</id>
 			<url>https://artifacts.alfresco.com/nexus/content/groups/public-snapshots</url>
@@ -60,7 +51,6 @@
 				<updatePolicy>daily</updatePolicy>
 			</snapshots>
 		</pluginRepository>
-      
 		<pluginRepository>
 			<id>beardedgeeks-releases</id>
 			<url>http://beardedgeeks.googlecode.com/svn/repository/releases</url>
@@ -73,9 +63,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring.version>3.0.5.RELEASE</spring.version>					<!-- For Alfresco 3.4.x use 3.0.0.RELEASE -->
-        <alfresco.version>4.0.0</alfresco.version>
-        <alfresco.groupId>org.alfresco.enterprise</alfresco.groupId>  	
-		<alfresco.classifier>enterprise</alfresco.classifier> 	
+        <alfresco.version>4.0.e</alfresco.version>
+        <alfresco.groupId>org.alfresco</alfresco.groupId>  	<!-- Use "org.alfresco" for community artifacts -->
         <skip.functional.tests>true</skip.functional.tests>
     </properties>
 
