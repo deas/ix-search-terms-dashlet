@@ -13,18 +13,16 @@ var FILTER_QUERY_NO_OF_RESULTS = "@{http://www.ixxus.com/model/ixxus/1.0}numberO
  * @param milliseconds
  * @returns Date
  */
-function getRangeDate(filter, hour, minutes, seconds, milliseconds)
-{
+function getRangeDate(filter, hour, minutes, seconds, milliseconds) {
 	var now = new Date();
 	var queryDate = now.setHours(hour, minutes, seconds, milliseconds);
 	queryDate = now.setDate(now.getDate() - filter);
 	return utils.toISO8601(queryDate).toString();
 }
 
-function main()
-{
-	if (logger.isLoggingEnabled())
-	{
+function main() {
+	
+	if (logger.isLoggingEnabled()) {
 		logger.log("Getting search terms...");
 	}
 	
@@ -61,13 +59,11 @@ function main()
 	ftsQuery = '((TYPE:"ix:searchTerm" AND ' + dateRangeQuery + ') AND -TYPE:"cm:thumbnail" AND -TYPE:"cm:failedThumbnail" AND -TYPE:"cm:rating") AND NOT ASPECT:"sys:hidden"';
 	
 	//get max items
-	if(typeof url.templateArgs.maxItems !== "undefined")
-	{
+	if(typeof url.templateArgs.maxItems !== "undefined") {
 		maxItems = url.templateArgs.maxItems;
 	}
 
-	if(logger.isLoggingEnabled())
-	{
+	if(logger.isLoggingEnabled()) {
 		logger.log("Date range query : " + dateRangeQuery);
 		logger.log("Fts query : "  + ftsQuery);
 	}
@@ -85,26 +81,20 @@ function main()
 	
 	nodes = search.query(queryDef);
 	
-	for(var i = 0; i < nodes.length; i++)
-	{
-		if(nodes[i].isFacet)
-		{
+	for(var i = 0; i < nodes.length; i++) {
+		if(nodes[i].isFacet) {
 			var facet = nodes[i];
-			if(facet.facetHasAnyHits)
-			{
+			if(facet.facetHasAnyHits) {
 				searchTerm = facet;
 		  	}
 		}
 	}
 	
-	if(logger.isLoggingEnabled())
-	{
-		if(searchTerm && searchTerm.facetList)
-		{
+	if(logger.isLoggingEnabled()) {
+		if(searchTerm && searchTerm.facetList) {
 			logger.log("Found " +  searchTerm.facetList.length + " search terms.");
 		}
-		else
-		{
+		else {
 			logger.log("No search terms found.");
 		}
 	}
