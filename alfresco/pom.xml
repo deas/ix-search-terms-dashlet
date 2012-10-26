@@ -10,12 +10,12 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	
-	<name>Search Terms Dashlet Alfresco AMP</name>
+	<name>Search Terms Dashlet Alfresco JAR</name>
     <description>Alfresco AMP for the Search Terms Dashlet Project </description>	
 
 	<groupId>com.ixxus</groupId>
 	<artifactId>search-terms-dashlet-alfresco</artifactId>
-	<packaging>amp</packaging>
+	<packaging>jar</packaging>
 	
 	<properties>
         <webapp.name>alfresco</webapp.name>
@@ -129,7 +129,7 @@
             </plugin>			
 			
 			<!--Package the AMP -->
-			<plugin>
+			<!--plugin>
 				<groupId>org.alfresco.maven.plugin</groupId>
 				<artifactId>maven-amp-plugin</artifactId>
 				<version>3.0.4</version>
@@ -140,7 +140,7 @@
 						<addMavenDescriptor>false</addMavenDescriptor>
 					</archive>
 				</configuration>
-			</plugin>
+			</plugin-->
 		</plugins>
 	</build>
 </project>

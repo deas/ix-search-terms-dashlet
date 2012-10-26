@@ -14,7 +14,7 @@
 
 	<groupId>com.ixxus</groupId>
 	<artifactId>search-terms-dashlet-share</artifactId>
-	<packaging>amp</packaging>
+	<packaging>jar</packaging>
 	
 	<properties>
         <webapp.name>share</webapp.name>
@@ -53,7 +53,7 @@
 			</plugin>
 
 			<!--Package the AMP -->
-			<plugin>
+			<!--plugin>
 				<groupId>org.alfresco.maven.plugin</groupId>
 				<artifactId>maven-amp-plugin</artifactId>
 				<version>3.0.4</version>
@@ -64,7 +64,7 @@
 						<addMavenDescriptor>false</addMavenDescriptor>
 					</archive>
 				</configuration>
-			</plugin>
+			</plugin-->
 		</plugins>
 	</build>
 	

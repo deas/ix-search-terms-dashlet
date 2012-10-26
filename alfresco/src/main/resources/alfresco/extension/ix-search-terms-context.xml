@@ -12,7 +12,7 @@
     	</property>
 		<property name="locations">
 			<list>
-				<value>classpath:alfresco/module/search-terms-dashlet/search-term.properties</value>
+				<value>classpath:alfresco/extension/search-term.properties</value>
 			</list>
 		</property>
     </bean>
@@ -22,7 +22,7 @@
     	depends-on="dictionaryBootstrap">
         <property name="models">
             <list>
-            	<value>alfresco/module/search-terms-dashlet/model/content-model.xml</value>
+            	<value>alfresco/extension/model/search-terms-model.xml</value>
             </list>
         </property>
     </bean>        
